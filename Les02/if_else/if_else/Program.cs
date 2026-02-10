@@ -42,7 +42,21 @@ namespace if_else
             // experimentje
             Console.WriteLine(int.TryParse(Console.ReadLine(), out int temp2) && temp2 < 0);
 
+            int a = 200;
+            int b = 100;
 
+            Console.WriteLine(LargestNumber(a, b));
+        }
+
+        private static int LargestNumber(int x, int y)
+        {
+            //int c;
+            //if (x > y) c = x;
+            //else c = y;
+            //return c;
+            //int z = x > y ? x : y;
+            //return z;
+            return x > y ? x : y;
         }
     }
 }
