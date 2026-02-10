@@ -11,6 +11,7 @@ namespace if_else
         static void Main(string[] args)
         {
             double temperature = 7;
+
             //bool freezing;
 
             //if (temperature < 0)
