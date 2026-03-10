@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.App
 {
-    internal class Circle : Ellipse
+    public class Circle : Ellipse
     {
 
         public int Diameter

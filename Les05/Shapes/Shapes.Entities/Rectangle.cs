@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.App
 {
-    internal class Rectangle : Polygon
+    public class Rectangle : Polygon
     {
         // unieke properties voor rectangle
         public int Width { get; set; }

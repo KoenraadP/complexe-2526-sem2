@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.App
 {
-    internal class Ellipse : Shape
+    public class Ellipse : Shape
     {       
         public int Height { get; set; }
         public int Width { get; set; }

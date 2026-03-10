@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shapes.Entities;
+using System;
 
 namespace Shapes.App
 {
@@ -14,10 +11,10 @@ namespace Shapes.App
 
             Polygon polygon1 = new Polygon("Blue");
             polygon1.Height = 10;
-            Console.WriteLine(polygon1);
+            System.Console.WriteLine(polygon1);
 
             Rectangle rectangle1 = new Rectangle(5,10,"Purple");
-            Console.WriteLine(rectangle1.Area());
+            System.Console.WriteLine(rectangle1.Area());
             Console.WriteLine(rectangle1.Perimeter());
 
             Square square1 = new Square(6, "Orange");
@@ -26,6 +23,8 @@ namespace Shapes.App
 
             Circle c = new Circle(6, "Orange");
             Console.WriteLine(c.Diameter);
+
+            Triangle t = new Triangle();
         }
     }
 }

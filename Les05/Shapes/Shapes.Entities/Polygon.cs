@@ -8,7 +8,7 @@ namespace Shapes.App
 {
     // polygon = 'veelhoek'
     // overerven met dubbelpunt --> alle properties, constructors, methodes, ... komen over van base class
-    internal class Polygon : Shape
+    public class Polygon : Shape
     {
         // aparte properties die niet in de base class zitten
         public int Height { get; set; }
