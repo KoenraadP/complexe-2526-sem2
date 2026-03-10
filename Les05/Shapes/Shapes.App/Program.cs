@@ -23,6 +23,9 @@ namespace Shapes.App
             Square square1 = new Square(6, "Orange");
             Console.WriteLine(square1.Area());
             Console.WriteLine(square1.Perimeter());
+
+            Circle c = new Circle(6, "Orange");
+            Console.WriteLine(c.Diameter);
         }
     }
 }
