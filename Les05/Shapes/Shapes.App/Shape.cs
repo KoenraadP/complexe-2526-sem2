@@ -12,6 +12,7 @@ namespace Shapes.App
         // property 'kleur', iedere vorm heeft een kleur
         public string Color { get; set; }
 
+        // constructor --> alle vormen en afgeleide classes moeten color invullen
         public Shape(string color)
         {
             Color = color;

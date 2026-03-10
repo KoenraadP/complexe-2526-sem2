@@ -13,16 +13,15 @@ namespace Shapes.App
         // aparte properties die niet in de base class zitten
         public int Height { get; set; }
 
-        public Polygon()
+        public Polygon(string color) : base(color)
         {
             
         }
 
         // color komt uit de base class
-        public Polygon(int height, string color)
+        public Polygon(int height, string color) : base(color) 
         {
             Height = height;
-            Color = color;
         }
 
         // als je een polygon opvraagt in de console

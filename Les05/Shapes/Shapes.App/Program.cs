@@ -12,14 +12,9 @@ namespace Shapes.App
         {
             Shape shape1 = new Shape("Red");
 
-            Polygon polygon1 = new Polygon();
-            Console.WriteLine(polygon1);
-
-
-            polygon1.Color = "Blue";
+            Polygon polygon1 = new Polygon("Blue");
             polygon1.Height = 10;
-
-
+            Console.WriteLine(polygon1);            
         }
     }
 }
