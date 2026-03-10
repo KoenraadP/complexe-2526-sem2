@@ -25,6 +25,7 @@ namespace Shapes.App
 
         // alternatief
         /*public int Diameter { get; set; }
+         * 
         public Circle(int diameter, string color) : base(diameter, diameter, color)
         {
             Diameter = diameter;
