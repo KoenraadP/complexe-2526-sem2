@@ -18,6 +18,7 @@ namespace EnumsDemo.Cons
 
             Console.WriteLine(Country.BE);
             Console.WriteLine((Country)22);
+            Console.WriteLine(Country.BE.GetEnumDescription());
         }
     }
 }
