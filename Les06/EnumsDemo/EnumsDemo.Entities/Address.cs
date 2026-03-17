@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnumsDemo.Entities
 {
-    internal class Address
+    public class Address
     {
         public string StreetName { get; set; }
         public string HouseNumber { get; set; } 

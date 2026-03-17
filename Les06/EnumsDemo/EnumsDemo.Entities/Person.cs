@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnumsDemo.Entities
 {
-    internal class Person
+    public class Person
     {
         // id voor person
         public Guid PersonId { get; set; }
