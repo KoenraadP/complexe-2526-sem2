@@ -36,6 +36,7 @@ namespace EnumsDemo.Cons
 
             Person p = new Person(id, name, address, country);
             Console.WriteLine(p.PersonId);
+            Console.WriteLine(p.ToString());
         }
     }
 }

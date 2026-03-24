@@ -43,6 +43,42 @@ namespace EnumsDemo.Entities
         Zondag
     }
 
+    public enum Maand
+    {
+        Januari,
+        Februari,
+        Maart
+    }
+
+    public enum Sport
+    {
+        Voetbal,
+        Tennis,
+        Volleybal,
+        Basketbal
+    }
+
+    public enum SmartphoneBrand
+    {
+        Samsung,
+        Apple,
+        OnePlus,
+        Motorola
+    }
+
+    public enum SearchEngines
+    {
+        Google,
+        Bing,
+        Duckduckgo
+    }
+
+    public enum OrderStatus
+    {
+        Processed,
+        Cancelled
+    }
+
     public enum Country
     {
         [Description("Afghanistan")] AF = 1,
