@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaveText.Bll;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace SaveText.UI
         public FrmSaveText()
         {
             InitializeComponent();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            // tekst uit form in variabelen opslaan
+            string title = txtTitle.Text;
+            string text = txtStory.Text;
+            string directory = @"C:\verhalen\";
+
+            // SaveText methode uit TextBll uitvoeren
+            TextBll.SaveText(directory, title, text);
         }
     }
 }

@@ -57,6 +57,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Opslaan";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnOpen
             // 

@@ -2,7 +2,7 @@
 
 namespace SaveText.Bll
 {
-    internal class TextBll
+    public class TextBll
     {
         // methode die een string kan opslaan
         // in een tekstbestand op de computer
@@ -11,10 +11,11 @@ namespace SaveText.Bll
         // voorbeeld directory: C:\verhalen\
         // voorbeeld title: doornroosje
         // voorbeeld text: het volledige verhaal
-        public void SaveText(string directory,
+        public static void SaveText(string directory,
                             string title, string text)
         {
             // opbouwen pad om op te slaan, inclusief bestandsextensie
+            // voorbeeld: C:\verhalen\sprookje.txt
             string fullPath = Path.Combine(directory, title + ".txt");
 
             // File is een ingebouwde class
