@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System;
 
 namespace SaveText.Bll
 {
@@ -14,6 +15,19 @@ namespace SaveText.Bll
         public static void SaveText(string directory,
                             string title, string text)
         {
+            // controleren of directory al bestaat op computer
+            if (!Directory.Exists(directory))
+            {
+                throw new DirectoryNotFoundException("Map " +
+                    directory + " bestaat niet. Wil je deze aanmaken?");
+            }
+
+            // controleren of titel en tekst niet leeg zijn
+            if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(text))
+            {
+                throw new ArgumentException("Titel of tekst niet ingevuld");
+            }
+
             // opbouwen pad om op te slaan, inclusief bestandsextensie
             // voorbeeld: C:\verhalen\sprookje.txt
             string fullPath = Path.Combine(directory, title + ".txt");
