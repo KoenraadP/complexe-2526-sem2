@@ -1,13 +1,6 @@
 ﻿using SaveText.Bll;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SaveText.UI
@@ -63,6 +56,28 @@ namespace SaveText.UI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void BtnOpen_Click(object sender, EventArgs e)
+        {
+            // 'dialoogvenster' tonen om bestand te kiezen
+            ofd.ShowDialog();
+        }
+
+        // code die uitgevoerd wordt wanneer een bestand
+        // correct geselecteerd werd om te openen
+        private void Ofd_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // volledige pad opslaan in variabele
+            // voorbeeld: C:\verhalen\assepoester.txt
+            string fullPath = ofd.FileName;
+
+            // specifiek de naam van het bestand uit het pad halen
+            string title = Path.GetFileNameWithoutExtension(fullPath);
+
+            // tekst uit bestand tonen in correcte textboxes
+            txtTitle.Text = title;
+            txtStory.Text = File.ReadAllText(fullPath);
         }
     }
 }
