@@ -1,4 +1,5 @@
 ﻿using Contacts.Bll;
+using Contacts.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,14 @@ namespace Contacts.UI
         {
             // methode uit bll uitvoeren om tekstbestand in te lezen
             // fullpath --> ofd.FileName (voorbeeld c:\contacten\creo.txt)
-            ContactsBll.LoadContacts(ofd.FileName);
+            // resultaat opslaan in variabele lstPeople
+            List<Person> lstPeople = ContactsBll.LoadContacts(ofd.FileName);
+
+            // alle Person objecten in de combobox plaatsen
+            foreach (Person p in lstPeople)
+            {
+                cbxContacts.Items.Add(p);
+            }
         }
     }
 }
