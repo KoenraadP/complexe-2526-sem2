@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Contacts.Bll;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,8 @@ namespace Contacts.UI
 
         private void Ofd_FileOk(object sender, CancelEventArgs e)
         {
-            
+            // fullpath --> ofd.FileName (voorbeeld c:\contacten\creo.txt)
+            ContactsBll.LoadContacts(ofd.FileName);
         }
     }
 }
