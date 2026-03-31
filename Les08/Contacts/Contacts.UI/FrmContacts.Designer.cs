@@ -54,6 +54,7 @@
             // 
             // cbxContacts
             // 
+            this.cbxContacts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxContacts.FormattingEnabled = true;
             this.cbxContacts.Location = new System.Drawing.Point(13, 43);
             this.cbxContacts.Name = "cbxContacts";

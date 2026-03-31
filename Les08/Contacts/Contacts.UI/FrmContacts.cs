@@ -38,6 +38,9 @@ namespace Contacts.UI
             {
                 cbxContacts.Items.Add(p);
             }
+
+            // eerste element uit combobox 'selecteren' (actief zetten)
+            cbxContacts.SelectedIndex = 0;
         }
     }
 }
