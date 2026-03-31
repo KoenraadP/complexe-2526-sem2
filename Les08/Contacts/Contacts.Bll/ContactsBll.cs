@@ -47,5 +47,16 @@ namespace Contacts.Bll
 
             return lstPeople;
         }
+
+        // methode om de gegevens van een Person te updaten
+        // parameters: Person met nieuwe data, list met Persons in
+        public static void UpdateContacts(Person updatedPerson, List<Person> lstPeople)
+        {
+            // index van persoon opslaan die we moeten aanpassen
+            // index = op welke plaats in de list staat de Person
+            int index = updatedPerson.Id - 1;
+            // persoon op juiste plaats in list 'vervangen' met nieuwe data
+            lstPeople[index] = updatedPerson;
+        }
     }
 }
