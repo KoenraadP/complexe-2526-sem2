@@ -58,5 +58,32 @@ namespace Contacts.Bll
             // persoon op juiste plaats in list 'vervangen' met nieuwe data
             lstPeople[index] = updatedPerson;
         }
+
+        // methode om de inhoud van de volledige list 
+        // opnieuw op te slaan in het tekstbestand
+        // fullpath --> het volledige pad naar het bestand bvb c:\contacten\creo.text
+        // lstPeople --> de huidige list met alle personen in
+        public static void UpdateFile(string fullPath, List<Person> lstPeople)
+        {
+            // om de WriteAllLines() te kunnen gebruiken, moeten we
+            // een string[] array voorzien, deze maken we hier al aan
+            string[] newLines = new string[lstPeople.Count]; // .Count = aantal items in de list
+
+            // alle Person objecten uit de list opnieuw omzetten
+            // naar één string lijntje met de correcte 'syntax'
+            // voor het tekstbestand --> id;voornaam;achternaam;e-mail
+            foreach(Person p in lstPeople)
+            {
+                string line = p.Id + ";"
+                            + p.FirstName + ";"
+                            + p.LastName + ";"
+                            + p.Email;
+                // string op de juiste plaats in de array zetten
+                newLines[p.Id - 1] = line;
+            }
+
+            // inhoud van array in txt file plaatsen
+            File.WriteAllLines(fullPath, newLines);
+        }
     }
 }

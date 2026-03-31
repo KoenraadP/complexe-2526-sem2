@@ -68,7 +68,9 @@ namespace Contacts.UI
             // combobox updaten
             UpdateBox();
             // juiste persoon opnieuw op 'selected' zetten in combobox
-            cbxContacts.SelectedIndex = updatedPerson.Id - 1;
+            cbxContacts.SelectedItem = updatedPerson;
+            // nieuwe data ook opslaan in tekstbestand
+            ContactsBll.UpdateFile(ofd.FileName, LstPeople);
         }
 
         // methode om combobox opnieuw 'op te bouwen' met data uit list
