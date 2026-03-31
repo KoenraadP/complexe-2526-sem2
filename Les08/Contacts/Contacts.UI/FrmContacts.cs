@@ -27,6 +27,7 @@ namespace Contacts.UI
 
         private void Ofd_FileOk(object sender, CancelEventArgs e)
         {
+            // methode uit bll uitvoeren om tekstbestand in te lezen
             // fullpath --> ofd.FileName (voorbeeld c:\contacten\creo.txt)
             ContactsBll.LoadContacts(ofd.FileName);
         }

@@ -24,7 +24,26 @@ namespace Contacts.Bll
             string[] lines = File.ReadAllLines(fullPath);
 
             // testen wat er momenteel op index 0 in de array zit
-            Console.WriteLine(lines[0]);
+            // Console.WriteLine(lines[0]);
+
+            // ieder aparte lijn uit tekst verwerken
+            foreach (string line in lines)
+            {
+                // array met vier aparte properties in: id, firstname, lastname, email
+                string[] personData = line.Split(';');
+
+                // data opslaan in Person variabele
+                Person p = new Person
+                {
+                    Id = Convert.ToInt32(personData[0]),
+                    FirstName = personData[1],
+                    LastName = personData[2],
+                    Email = personData[3],
+                };
+
+                // Person toevoegen aan de list
+                lstPeople.Add(p);
+            }
 
             return lstPeople;
         }
