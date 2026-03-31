@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Contacts.Bll/Contacts.Bll.csproj" Id="01d545f8-895a-449d-bc80-219b4f9e4289" />
   <Project Path="Contacts.Entities/Contacts.Entities.csproj" Id="2fddfda8-aad3-41ef-998f-fea47cf2be65" />
   <Project Path="Contacts.UI/Contacts.UI.csproj" Id="cb6eb4f6-4865-4733-b5a3-be9cb07fef5f" />
 </Solution>

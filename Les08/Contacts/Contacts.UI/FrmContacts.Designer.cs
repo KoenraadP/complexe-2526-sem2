@@ -135,8 +135,9 @@
             // 
             // ofd
             // 
-            this.ofd.FileName = "openFileDialog1";
             this.ofd.Filter = "Tekstbestanden|*.txt";
+            this.ofd.InitialDirectory = "C:\\contacten\\";
+            this.ofd.FileOk += new System.ComponentModel.CancelEventHandler(this.Ofd_FileOk);
             // 
             // FrmContacts
             // 

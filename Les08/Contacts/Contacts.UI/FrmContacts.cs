@@ -23,5 +23,10 @@ namespace Contacts.UI
             // pop-up 'dialog' voor open file tonen
             ofd.ShowDialog();
         }
+
+        private void Ofd_FileOk(object sender, CancelEventArgs e)
+        {
+            
+        }
     }
 }

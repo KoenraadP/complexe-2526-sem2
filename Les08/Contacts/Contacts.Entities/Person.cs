@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contacts.Entities
 {
-    internal class Person
+    public class Person
     {
         // in het tekstbestand zal één rij dan ingesteld staan
         // als: id;firstname;lastname;email
