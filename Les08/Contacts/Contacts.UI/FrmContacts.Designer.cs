@@ -136,6 +136,7 @@
             // ofd
             // 
             this.ofd.FileName = "openFileDialog1";
+            this.ofd.Filter = "Tekstbestanden|*.txt";
             // 
             // FrmContacts
             // 

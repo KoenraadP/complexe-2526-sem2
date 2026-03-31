@@ -20,7 +20,8 @@ namespace Contacts.UI
 
         private void BtnOpen_Click(object sender, EventArgs e)
         {
-
+            // pop-up 'dialog' voor open file tonen
+            ofd.ShowDialog();
         }
     }
 }
