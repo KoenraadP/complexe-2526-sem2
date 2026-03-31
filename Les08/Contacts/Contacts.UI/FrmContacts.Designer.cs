@@ -39,6 +39,7 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnOpen
@@ -49,6 +50,7 @@
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open bestand";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
             // 
             // cbxContacts
             // 
@@ -131,6 +133,10 @@
             this.lblEmail.TabIndex = 14;
             this.lblEmail.Text = "E-mail";
             // 
+            // ofd
+            // 
+            this.ofd.FileName = "openFileDialog1";
+            // 
             // FrmContacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +173,7 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.OpenFileDialog ofd;
     }
 }
 

@@ -17,5 +17,10 @@ namespace Contacts.UI
         {
             InitializeComponent();
         }
+
+        private void BtnOpen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
