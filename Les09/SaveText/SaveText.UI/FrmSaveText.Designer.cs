@@ -33,6 +33,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.btnSavePDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -56,7 +57,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(114, 23);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Opslaan";
+            this.btnSave.Text = "Opslaan txt";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -75,17 +76,29 @@
             this.ofd.FileName = "openFileDialog1";
             this.ofd.FileOk += new System.ComponentModel.CancelEventHandler(this.Ofd_FileOk);
             // 
+            // btnSavePDF
+            // 
+            this.btnSavePDF.Location = new System.Drawing.Point(12, 292);
+            this.btnSavePDF.Name = "btnSavePDF";
+            this.btnSavePDF.Size = new System.Drawing.Size(114, 23);
+            this.btnSavePDF.TabIndex = 4;
+            this.btnSavePDF.Text = "Opslaan PDF";
+            this.btnSavePDF.UseVisualStyleBackColor = true;
+            this.btnSavePDF.Click += new System.EventHandler(this.BtnSavePDF_Click);
+            // 
             // FrmSaveText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 298);
+            this.ClientSize = new System.Drawing.Size(262, 322);
+            this.Controls.Add(this.btnSavePDF);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtStory);
             this.Controls.Add(this.txtTitle);
             this.Name = "FrmSaveText";
             this.Text = "Sprookjes";
+            this.Load += new System.EventHandler(this.FrmSaveText_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,6 +111,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.Button btnSavePDF;
     }
 }
 

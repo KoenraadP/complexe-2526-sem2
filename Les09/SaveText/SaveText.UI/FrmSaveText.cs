@@ -1,4 +1,5 @@
-﻿using SaveText.Bll;
+﻿using PdfSharp.Fonts;
+using SaveText.Bll;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -78,6 +79,32 @@ namespace SaveText.UI
             // tekst uit bestand tonen in correcte textboxes
             txtTitle.Text = title;
             txtStory.Text = File.ReadAllText(fullPath);
+        }
+
+        private void BtnSavePDF_Click(object sender, EventArgs e)
+        {
+            // tekst uit form in variabelen opslaan
+            string title = txtTitle.Text;
+            string text = txtStory.Text;
+            string directory = @"C:\verhalen\";
+
+            // de SavePDF methode uitvoeren in een algemene try catch
+            try
+            {
+                TextBll.SavePDF(directory, title, text);
+            }
+            catch (Exception ex)
+            {
+                // foutmelding tonen als er iets fout loopt
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FrmSaveText_Load(object sender, EventArgs e)
+        {
+            // lijn code die nodig is om de lettertypes via PDFSharp te doen werken
+            // hiervoor heb je ook het pdfsharp package nodig
+            GlobalFontSettings.UseWindowsFontsUnderWindows = true;
         }
     }
 }
