@@ -30,6 +30,7 @@ namespace Contacts.Bll
             foreach (string line in lines)
             {
                 // array met vier aparte properties in: id, firstname, lastname, email
+                // een line is bijvoorbeeld: 0;Koenraad;Pecceu;koenraad.pecceu@creo.be
                 string[] personData = line.Split(';');
 
                 // data opslaan in Person variabele

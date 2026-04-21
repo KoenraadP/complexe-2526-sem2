@@ -15,6 +15,8 @@ namespace Contacts.Entities
         public string LastName { get; set; }
         public string Email { get; set; }
 
+     
+
         // override ToString om naam in combobox te tonen
         public override string ToString()
         {

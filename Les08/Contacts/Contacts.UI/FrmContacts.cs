@@ -43,7 +43,7 @@ namespace Contacts.UI
         private void CbxContacts_SelectedIndexChanged(object sender, EventArgs e)
         {
             // geselecteerde persoon uit combobox in variabele opslaan
-            Person p = (Person)cbxContacts.SelectedItem;
+            Person p = (Person) cbxContacts.SelectedItem;
 
             // alle tekstvelden invullen
             txtId.Text = p.Id.ToString();
@@ -79,6 +79,19 @@ namespace Contacts.UI
             cbxContacts.Items.Clear();
             foreach (Person p in LstPeople) 
                 cbxContacts.Items.Add(p);
+        }
+
+        private void FrmContacts_Load(object sender, EventArgs e)
+        {
+            string path = @"c:\contacten\creo.txt";
+            LstPeople = ContactsBll.LoadContacts(path);
+
+            foreach (Person p in LstPeople)
+            {
+                cbxContacts.Items.Add(p);
+            }
+
+            cbxContacts.SelectedIndex = 0;
         }
     }
 }
