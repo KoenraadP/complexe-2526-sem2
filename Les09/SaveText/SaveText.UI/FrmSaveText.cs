@@ -32,7 +32,7 @@ namespace SaveText.UI
                 // foutmelding tonen en keuze yes/no opslaan in variabele
                 DialogResult chosenOption = MessageBox.Show(ex.Message, "Map niet gevonden",
                     MessageBoxButtons.YesNo);
-                
+
                 // als ik op ja klik, map aanmaken
                 if (chosenOption == DialogResult.Yes)
                 {
@@ -105,6 +105,31 @@ namespace SaveText.UI
             // lijn code die nodig is om de lettertypes via PDFSharp te doen werken
             // hiervoor heb je ook het pdfsharp package nodig
             GlobalFontSettings.UseWindowsFontsUnderWindows = true;
+        }
+
+        private void BtnSaveAs_Click(object sender, EventArgs e)
+        {
+            // title standaard als bestandsnaam instellen
+            sfd.FileName = txtTitle.Text;
+            // venster voor 'opslaan als' tonen
+            sfd.ShowDialog();
+        }
+
+        // event methode die uitgevoerd wordt bij 'opslaan als'
+        private void Sfd_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // waarden ophalen uit keuze in 'opslaan als' venster
+            // de sfd.FileName bevat ALLES bijvoorbeeld: C:\persoonlijk\geheim.txt
+            string title = Path.GetFileNameWithoutExtension(sfd.FileName);
+            string text = txtStory.Text;
+            string directory = Path.GetDirectoryName(sfd.FileName);
+
+            // op basis van gekozen bestandstype (txt of pdf)
+            // de juiste methode uitvoeren om op te slaan
+            if (sfd.FilterIndex == 1) // 1 --> *.txt
+                TextBll.SaveText(directory, title, text);
+            else // 2 --> *.pdf
+                TextBll.SavePDF(directory, title, text);
         }
     }
 }

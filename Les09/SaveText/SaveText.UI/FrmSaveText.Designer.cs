@@ -34,6 +34,8 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.btnSavePDF = new System.Windows.Forms.Button();
+            this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.btnSaveAs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -86,11 +88,27 @@
             this.btnSavePDF.UseVisualStyleBackColor = true;
             this.btnSavePDF.Click += new System.EventHandler(this.BtnSavePDF_Click);
             // 
+            // sfd
+            // 
+            this.sfd.Filter = "Tekstbestanden|*.txt|PDF bestanden|*.pdf";
+            this.sfd.FileOk += new System.ComponentModel.CancelEventHandler(this.Sfd_FileOk);
+            // 
+            // btnSaveAs
+            // 
+            this.btnSaveAs.Location = new System.Drawing.Point(133, 292);
+            this.btnSaveAs.Name = "btnSaveAs";
+            this.btnSaveAs.Size = new System.Drawing.Size(114, 23);
+            this.btnSaveAs.TabIndex = 5;
+            this.btnSaveAs.Text = "Opslaan als";
+            this.btnSaveAs.UseVisualStyleBackColor = true;
+            this.btnSaveAs.Click += new System.EventHandler(this.BtnSaveAs_Click);
+            // 
             // FrmSaveText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(262, 322);
+            this.Controls.Add(this.btnSaveAs);
             this.Controls.Add(this.btnSavePDF);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
@@ -112,6 +130,8 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.OpenFileDialog ofd;
         private System.Windows.Forms.Button btnSavePDF;
+        private System.Windows.Forms.SaveFileDialog sfd;
+        private System.Windows.Forms.Button btnSaveAs;
     }
 }
 
