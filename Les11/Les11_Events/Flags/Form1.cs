@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Flags.Properties;
+using System;
 using System.Windows.Forms;
 
 namespace Flags
@@ -28,22 +22,29 @@ namespace Flags
             if (cbxLanguage.SelectedIndex == 0)
             {
                 lblGreeting.Text = "Goedemorgen";
+                // picturebox invullen met correcte afbeelding
+                pbxFlag.Image = Resources.Flag_NL;
+                // je kan ook werken met ImageLocation 
+                //pbxFlag.ImageLocation = "https://t4.ftcdn.net/jpg/01/16/24/15/360_F_116241515_2Gq7EBxGr73TbSqrFb2bJnAYhI7SJ3dB.jpg";
             }
 
             //if (cbxLanguage.SelectedItem.ToString() == "English")
             if (cbxLanguage.SelectedIndex == 1)
             {
                 lblGreeting.Text = "Good morning!";
+                pbxFlag.Image = Resources.Flag_UK;
             }
 
             if (cbxLanguage.SelectedIndex == 2)
             {
                 lblGreeting.Text = "Bonjour!";
+                pbxFlag.Image = Resources.Flag_FR;
             }
 
             if (cbxLanguage.SelectedIndex == 3)
             {
                 lblGreeting.Text = "Guten Morgen!";
+                pbxFlag.Image = Resources.Flag_DE;
             }
 
             //switch (cbxLanguage.SelectedIndex)

@@ -63,6 +63,7 @@
             this.pbxFlag.Location = new System.Drawing.Point(13, 58);
             this.pbxFlag.Name = "pbxFlag";
             this.pbxFlag.Size = new System.Drawing.Size(197, 139);
+            this.pbxFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxFlag.TabIndex = 2;
             this.pbxFlag.TabStop = false;
             // 
