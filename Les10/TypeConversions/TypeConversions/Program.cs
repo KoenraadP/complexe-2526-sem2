@@ -14,6 +14,8 @@ namespace TypeConversions
             int nr1 = 9;
             double nr2 = nr1;
 
+            int age = Convert.ToInt32(Console.ReadLine());
+
             // Byte Short Int Long Float Double
             // Bart Staat In Lange File Druk
 
@@ -36,7 +38,7 @@ namespace TypeConversions
             // bankers' rounding --> bij .5 gaan we naar het EVEN getal kan zowel naar beneden als naar boven zijn
             // https://en.wikipedia.org/wiki/Rounding
             double nr6 = 10.5;
-            int nr7 = Convert.ToInt32(nr6);
+            int nr7 = Convert.ToInt32(nr6); // 10
             Console.WriteLine(nr7);
 
             double nr8 = 9;
