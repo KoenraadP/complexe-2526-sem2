@@ -81,6 +81,15 @@ namespace MultiDemo
                 int lastRow = students.GetLength(0) - 1;
                 Console.WriteLine(students[lastRow, i]);
             }
+
+            // alle gegevens tonen met dubbele loop
+            for (int row = 0; row < students.GetLength(0); row++)
+            {
+                for (int col = 0; col < students.GetLength(1); col++)
+                {
+                    Console.Write(students[row, col].PadRight(20));
+                }
+            }
         }
     }
 }
