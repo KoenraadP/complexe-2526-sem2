@@ -1,11 +1,16 @@
-﻿using Connect4.Entities;
+﻿using Connect4.Bll;
+using Connect4.Entities;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Connect4.App
 {
     public partial class FrmConnect4 : Form
     {
+        // properties form
+        public Game Game { get; set; }  
+
         public FrmConnect4()
         {
             InitializeComponent();
@@ -14,10 +19,18 @@ namespace Connect4.App
         // Load wordt uitgevoerd bij opstarten programma
         private void FrmConnect4_Load(object sender, EventArgs e)
         {
-            // token aanmaken
-            Token t = new Token();
-            // token (eigenlijk een panel dus) toevoegen aan form
-            Controls.Add(t);
+            StartGame();
+            Console.WriteLine(Game.Grid[0, 0]); // grid testen
+        }
+
+        // methode om Game te starten
+        private void StartGame()
+        {
+            // nieuw Game initialiseren
+            // start automatisch met alle waarden 
+            // uit constructor van Game class
+            Game = new Game(this); // this --> deze form (FrmConnect4)
+            Game.PlaceTokens();
         }
     }
 }
